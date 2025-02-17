@@ -1,5 +1,5 @@
 {
-  "name": "@kinode/client-api",
+  "name": "@hyperware-ai/client-api",
   "version": "0.1.0",
   "description": "Client-side library for handling websockets, encryption, and decryption from an Uqbar node",
   "main": "index.js",
