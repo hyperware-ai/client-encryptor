@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uqbar-dao/client-encryptor.git"
+    "url": "git+https://github.com/hyperware-ai/client-encryptor.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/uqbar-dao/client-encryptor/issues"
+    "url": "https://github.com/hyperware-ai/client-encryptor/issues"
   },
-  "homepage": "https://github.com/uqbar-dao/client-encryptor#readme",
+  "homepage": "https://github.com/hyperware-ai/client-encryptor#readme",
   "dependencies": {
     "buffer": "^6.0.3",
     "node-forge": "^1.3.1",
