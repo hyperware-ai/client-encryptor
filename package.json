@@ -1,7 +1,7 @@
 {
   "name": "@hyperware-ai/client-api",
-  "version": "0.1.0",
-  "description": "Client-side library for handling websockets, encryption, and decryption from an Uqbar node",
+  "version": "0.1.2",
+  "description": "Client-side library for handling websockets, encryption, and decryption from a Hyperware node",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.8.2",
-    "@types/node-forge": "^1.3.6"
+    "@types/node-forge": "^1.3.11"
   }
 }

@@ -1,14 +1,9 @@
 import forge from 'node-forge'
-import { Buffer } from 'buffer'
 
 interface ProcessId {
   process_name: string,
   package_name: string,
   publisher_node: string,
-}
-
-const processToString = (process: ProcessId): string => {
-  return `${process.process_name}:${process.package_name}:${process.publisher_node}`
 }
 
 const processFromString = (process: string): ProcessId => {
@@ -31,19 +26,6 @@ function stringifyAndEncode(data: any) {
   const encoder = new TextEncoder();
   const bytes = encoder.encode(json);
   return bytes
-}
-
-function blobToUint8Array(blob: Blob): Promise<Uint8Array> { // eslint-disable-line
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onerror = reject
-    reader.onload = function(event: any) {
-        const arrayBuffer = event.target.result;
-        const uint8Array = new Uint8Array(arrayBuffer);
-        resolve(uint8Array)
-    };
-    reader.readAsArrayBuffer(blob);
-  })
 }
 
 interface SendParams {
@@ -98,14 +80,14 @@ export default class UqbarEncryptorApi {
   }
 
   // methods
-  _encrypt = (message: string) => {
+  _encrypt = (_message: string) => {
     return null
   }
-  _decrypt = (dataAndNonce: Uint8Array): any => { // eslint-disable-line
+  _decrypt = (_dataAndNonce: Uint8Array): any => { // eslint-disable-line
   }
   send = ({ data }: SendParams) => {
-    const auth_token = getCookie(`hyperware-auth_${this.nodeId}`) // eslint-disable-line
-    const ws_auth_token = getCookie(`hyperware-ws-auth_${this.nodeId}`) // eslint-disable-line
+    //const auth_token = getCookie(`hyperware-auth_${this.nodeId}`) // eslint-disable-line
+    //const ws_auth_token = getCookie(`hyperware-ws-auth_${this.nodeId}`) // eslint-disable-line
 
       this._ws.send(stringifyAndEncode(
         data

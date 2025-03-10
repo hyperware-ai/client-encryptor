@@ -18,9 +18,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "react-jsx",
-    // "sourceMap": true,
-    // "emitDeclarationOnly": true,
+    "jsx": "react-jsx"
   },
   "include": ["index.ts"]
 }
