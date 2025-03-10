@@ -11,16 +11,6 @@ const processFromString = (process: string): ProcessId => {
   return { process_name, package_name, publisher_node }
 }
 
-function getCookie(name: string) {
-  const cookies = document.cookie.split(';')
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].trim()
-    if (cookie.startsWith(name)) {
-      return cookie.substring(name.length + 1)
-    }
-  }
-}
-
 function stringifyAndEncode(data: any) {
   const json = JSON.stringify(data)
   const encoder = new TextEncoder();
@@ -86,9 +76,6 @@ export default class UqbarEncryptorApi {
   _decrypt = (_dataAndNonce: Uint8Array): any => { // eslint-disable-line
   }
   send = ({ data }: SendParams) => {
-    //const auth_token = getCookie(`hyperware-auth_${this.nodeId}`) // eslint-disable-line
-    //const ws_auth_token = getCookie(`hyperware-ws-auth_${this.nodeId}`) // eslint-disable-line
-
       this._ws.send(stringifyAndEncode(
         data
       ))
